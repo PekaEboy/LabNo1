@@ -25,8 +25,8 @@ int main()
 	double S = sqrt(abs(p) * abs(p - a) * abs(p - b) * abs(p - c));
 	cout << "Периметр треугольника: " << 2*p << endl;
 	cout << "Площадь треугольника: " << S << endl;
-	double alp = acos(abs(b*b+c*c-a*a)/abs(2*b*c)) * 180/3.1418;
-	double beta = acos(abs(a * a + b * b - c * c) / abs(2 * b * a)) * 180 / 3.1418;
+	double alp = acos((float)(b*b+c*c-a*a)/(2*b*c)) * 180/3.1418;
+	double beta = acos((float)(a * a + b * b - c * c) / (2 * b * a)) * 180 / 3.1418;
 	double gamme = 180 - alp - beta;
 	cout << "Первый угол: " << alp << endl;
 	cout << "Второй угол: " << beta << endl;
