@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <Windows.h>
 #include <locale>
-#include <math.h>
 
 using namespace std;
 
@@ -22,7 +21,7 @@ int main()
 	double b = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 	double c = sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1));
 	double p = (a + b + c) / 2;
-	double S = sqrt(abs(p) * abs(p - a) * abs(p - b) * abs(p - c));
+	double S = (float)sqrt(abs(p) * abs(p - a) * abs(p - b) * abs(p - c));
 	cout << "Периметр треугольника: " << 2*p << endl;
 	cout << "Площадь треугольника: " << S << endl;
 	double alp = acos((float)(b*b+c*c-a*a)/(2*b*c)) * 180/3.1418;
